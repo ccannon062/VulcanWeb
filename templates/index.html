@@ -1,0 +1,33 @@
+<!--
+    File: index.html
+    Project: vulcanWeb
+    Description: An index.html file representing the 'home' page.
+    Maintainer: Caleb Cannon
+    Version: 1.0
+    Last Modified: 2024-03-27
+    Dependencies: Bootstrap 5.3.3
+-->
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container-fluid hero p-3">
+        <h1 class="text-white text-center mt-5 mb-5">Restoring Vision For <br> Firefighters</h1>
+        <p class="text-white text-center pt-4 pb-4 subhead">Innovative technology enhancing visibility in smoke-filled <br> environments for firefighters.</p>
+        <div class="d-flex justify-content-center pt-1 mb-5">
+            <button type="button" class="custom-btn">Learn More</button>
+        </div>
+        <div class="d-flex justify-content-center pt-5 mb-5 custom-hero-gap hero-boxes">
+            <div class="text-white text-center">
+                <h4>Advanced Solutions</h4>
+                <p class="hero-description">Cutting-edge tech for smoke visibility <br> restoration.</p>
+            </div>
+            <div class="text-white text-center">
+                <h4>Innovative Tech</h4>
+                <p class="hero-description">Empowering firefighters with enhanced <br> sight capabilities.</p>
+            </div>
+            <div class="text-white text-center">
+                <h4>Firefighter Safety</h4>
+                <p class="hero-description">Transforming firefighting with innovative <br> visibility solutions.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
