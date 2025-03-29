@@ -20,6 +20,7 @@ body {
     font-size: 20px;
     font-weight: bold;
 }
+
 /*-------------------------------------*/
 /* Hero */
 .hero {
@@ -38,7 +39,7 @@ body {
     font-size: 20px;
 }
 
-.custom-btn {
+.hero-btn {
     color: #ffffff;
     background-color: transparent;
     padding: 15px;
@@ -50,7 +51,7 @@ body {
     font-size: 20px;
 }
 
-.custom-btn:hover {
+.hero-btn:hover {
     background-color: rgba(255, 255, 255, 0.2);
     color: #000000;
     border-color: #000000;
@@ -72,3 +73,63 @@ body {
     padding-top: 30px;
 }
 
+/*-------------------------------------*/
+/* Call To Action */
+.cta-padding {
+    padding: 100px 30px 100px 30px;
+}
+
+.custom-cta-gap {
+    gap: 50px;
+}
+
+.img-1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.img-2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.img-div {
+    width: 350px;
+    height: 450px;
+}
+
+.cta-head {
+    font-size: 45px;
+    padding-bottom: 10px;
+}
+
+.cta-description {
+    color: #56585E;
+}
+
+.cta-button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 150px;
+    background-color: transparent;
+    font-weight: bold;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+/*-------------------------------------*/
+/* Brief Features */
+
+.feature-color {
+    color: #ffffff;
+    background-color: #871C1C;
+}
