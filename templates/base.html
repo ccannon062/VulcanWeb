@@ -1,46 +1,82 @@
 <!--
     File: base.html
     Project: vulcanWeb
-    Description: A base file for Jinja2 templating.
+    Description: A base file for Jinja2 templating with Bootstrap sticky footer.
     Maintainer: Caleb Cannon
     Version: 1.0
     Last Modified: 2024-03-27
     Dependencies: Bootstrap 5.3.3
 -->
 <!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
-        <title>Vulcan Enterprises</title>
-    </head>
-    <body>
-        <nav class="navbar bg-body-tertiary p-3">
-            <div class="container-fluid">
-                <a class="navbar-brand disabled brand" href="#">Vulcan Enterprises</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav ms-auto">
-                        <a class="nav-link" href="/">Home</a>
-                        <a class="nav-link" href="/team">About Us</a>
-                        <a class="nav-link" href="/products">Products</a>
-                        <a class="nav-link" href="/news">News</a>
-                        <a class="nav-link" href="/contact">Contact</a>
-                    </div>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    <title>Vulcan Enterprises</title>
+</head>
+<body class="d-flex flex-column h-100">
+<nav class="navbar bg-body-tertiary p-3">
+    <div class="container-fluid">
+        <a class="navbar-brand disabled brand" href="#">Vulcan Enterprises</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/team">About Us</a>
+                <a class="nav-link" href="/products">Products</a>
+                <a class="nav-link" href="/news">News</a>
+                <a class="nav-link" href="/contact">Contact</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main class="flex-shrink-0">
+    {% block content %}
+    {% endblock %}
+</main>
+
+<footer class="footer mt-auto">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h2>Vision</h2>
+                <p>Restoring sight for firefighters in smoke emergencies.</p>
+                <div class="social-icons mt-4">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-tiktok"></i></a>
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
                 </div>
             </div>
-        </nav>
-        {% block content %}
-        {% endblock %}
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    </body>
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h2>Safety</h2>
+                <p>(123) - 456 -7890</p>
+                <a href="mailto:contactus@vulcan.com" class="footer-email">contactus@vulcan.com</a>
+            </div>
+            <div class="col-md-4">
+                <h2>Innovation</h2>
+                <p>Enter your email:</p>
+                <form id="newsletter-form" method="POST">
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" name="email" id="newsletter-email" placeholder="Email address" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
 </html>
