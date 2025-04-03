@@ -1,3 +1,29 @@
 {% extends 'base.html' %}
 {% block content %}
+    <div class="container-fluid p-5">
+        <h1 class="text-center">Contact Us</h1>
+        <div class="d-flex justify-content-center form-div">
+            <form class="form-size">
+                <div class="form-group mt-3">
+                    <label for="FirstNameInput">First Name</label>
+                    <input type="text" class="form-control" id="FirstNameInput" name="first_name" placeholder="John" required>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="LastNameInput">Last Name</label>
+                    <input type="text" class="form-control" id="LastNameInput" name="last_name" placeholder="Doe" required>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="EmailInput">Email</label>
+                    <input type="email" class="form-control" id="EmailInput" name="email" placeholder="johndoe@example.com" required>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="textArea1">Your Message</label>
+                    <textarea class="form-control" id="textArea1" name="message" rows="3" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="form-btn mt-3">Submit Your Information</button>
+                </div>
+            </form>
+        </div>
+    </div>
 {% endblock %}
