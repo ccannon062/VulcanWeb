@@ -1,3 +1,133 @@
 {% extends 'base.html' %}
 {% block content %}
+    <div class="container-fluid d-flex flex-column flex-md-row justify-content-center align-items-center product-padding">
+        <div class="align-middle">
+            <h1 class="product-heading">ARCTIC</h1>
+            <p class="subhead product-subheading">Advanced Thermal Imaging For Firefighters</p>
+            <p class="product-description">The revolutionary ARCTIC system restores visibility in smoke filled <br> environments,
+            giving firefighters the ability to navigate, locate victims, and <br> identify hazards even in zero-visibility conditions</p>
+            <button type="button" class="product-btn">Download Product Sheet</button>
+        </div>
+        <div class="product-img-div">
+            <img src="../static/images/placeholder.jpg" class="product-img" alt="ARCTIC Version 9" style="border-radius: 5px;">
+        </div>
+    </div>
+    <div class="container-fluid p-5 shadow-top">
+        <h3 class="text-center">Why Choose ARCTIC?</h3>
+        <div class="d-flex flex-column flex-md-row justify-content-center align-items-center p-5 gap-5">
+            <div class="card custom-card" style="width: 18rem;">
+                <div class="card-body text-center">
+                    <i class="bi bi-lightbulb-fill"></i>
+                    <h5 class="card-title">Enhanced Visibility</h5>
+                    <p class="card-text">Penetrates through dense smoke and darkness to provide clear thermal imaging of surroundings,
+                    victims, and hazards.</p>
+                </div>
+            </div>
+            <div class="card custom-card" style="width: 18rem;">
+                <div class="card-body text-center">
+                    <i class="bi bi-cone"></i>
+                    <h5 class="card-title">Seamless Integration</h5>
+                    <p class="card-text">Works with existing SCBA masks and helmets with minimal modification, preserving comfort
+                    and existing safety features.</p>
+                </div>
+            </div>
+            <div class="card custom-card" style="width: 18rem;">
+                <div class="card-body text-center">
+                    <i class="bi bi-lightning-charge-fill"></i>
+                    <h5 class="card-title">Unmatched Reliability</h5>
+                    <p class="card-text">Built to withstand extreme temperatures, impacts, and water exposure within 5+ hours of continuous
+                    operation time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid d-flex flex-column flex-md-row works justify-content-center align-items-center">
+        <div>
+            <h3 class="works-head">How ARCTIC works</h3>
+            <p>ARCTIC combines thermal imaging technology with intuitive display <br> interfaces to create a system that:</p>
+            <ul>
+                <li>Captures heat signatures through smoke, dust, and darkness</li>
+                <li>Projects critical information directly into the firefighters field of view</li>
+                <li>Highlights temperature variations to identify fire sources and victims</li>
+                <li>Integrates with existing firefighter gear for seamless operation</li>
+            </ul>
+        </div>
+        <div class="product-img-div">
+            <img src="../static/images/placeholder.jpg" class="product-img" alt="Product-img" style="border-radius: 5px;">
+        </div>
+    </div>
+    <div class="container-fluid p-5">
+        <h3 class="text-center">Technical Specifications</h3>
+        <div class="container-fluid d-flex justify-content-center p-5">
+            <table class="table table-striped t-width">
+                <tbody>
+                    <tr>
+                        <th scope="row">Display Resolution</th>
+                        <td>TBA</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Thermal Sensor</th>
+                        <td>TBA</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Temperature Range</th>
+                        <td>TBA</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Field of View</th>
+                        <td>TBA</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Battery Life</th>
+                        <td>TBA</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Weight</th>
+                        <td>TBA</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Water Resistance</th>
+                        <td>TBA</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Heat Resistance</th>
+                        <td>TBA</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="container-fluid app-div p-5">
+        <h3 class="text-center">Applications</h3>
+        <div class="d-flex flex-column align-items-center flex-md-row gap-3 p-5">
+            <div class="d-flex flex-column align-items-center text-center">
+                <div class="app-img-div">
+                    <img src="../static/images/houseFire.jpg" class="app-img" alt="A house fire">
+                </div>
+                <h4>Structure Fires</h4>
+                <p>Helps firefighters navigate through smoke-filled environments and locate hotspots to improve efficiency and safety.</p>
+            </div>
+            <div class="d-flex flex-column align-items-center text-center">
+                <div class="app-img-div">
+                    <img src="../static/images/forestFire.jpg" class="app-img" alt="A forest fire">
+                </div>
+                <h4>Wildland Fires</h4>
+                <p>Assists in detecting fire perimeters, identifying hotspots, and improving situational awareness in large-scale wildfire incidents.</p>
+            </div>
+            <div class="d-flex flex-column align-items-center text-center">
+                <div class="app-img-div">
+                    <img src="../static/images/searchAndRescue.jpg" class="app-img" alt="A search and rescue helicopter">
+                </div>
+                <h4>Search & Rescue</h4>
+                <p>Enables responders to locate missing persons in low-visibility conditions, such as darkness, fog, or collapsed structures.</p>
+            </div>
+            <div class="d-flex flex-column align-items-center text-center">
+                <div class="app-img-div">
+                    <img src="../static/images/hazmat.jpg" class="app-img" alt="A man in a hazmat suit">
+                </div>
+                <h4>Hazmat Incidents</h4>
+                <p>Aids in detecting temperature changes and potential hazardous material leaks to enhance safety in hazardous environments.</p>
+            </div>
+        </div>
+    </div>
 {% endblock %}
