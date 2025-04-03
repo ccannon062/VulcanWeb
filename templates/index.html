@@ -14,7 +14,7 @@
         <p class="text-white text-center pt-4 pb-4 subhead">Innovative technology enhancing visibility in smoke-filled <br>
             environments for firefighters.</p>
         <div class="d-flex justify-content-center pt-1 mb-5">
-            <button type="button" class="hero-btn">Learn More</button>
+            <a href="/products" class="hero-btn text-decoration-none text-center border border-3 border-white">Learn More</a>
         </div>
         <div class="d-flex flex-column flex-md-row justify-content-center pt-5 mb-5 custom-hero-gap hero-boxes align-items-center">
             <div class="text-white text-center">
@@ -36,7 +36,7 @@
             <h2 class="cta-head">Vision For <br> Firefighters</h2>
             <p class="cta-description">Revolutionizing visibility technology to empower <br> firefighters in smoke-filled environments
                 and <br> enhance their safety on the front lines.</p>
-            <button type="button" class="cta-button">Learn</button>
+            <a href="/products" class="cta-button text-decoration-none d-inline-block text-center border border-1 border-dark">Learn</a>
         </div>
         <div class="img-div">
             <img src="../static/images/rescuePortrait.jpg" class="img-fluid img-1" alt="A female firefighter rigged with ropes and rescue equipment.">
@@ -47,76 +47,69 @@
     </div>
     <div class="container-fluid feature-color feature-padding">
         <h2 class="text-center feature-heading">Enhanced Firefighter Vision</h2>
-        <p class="text-center">Revolutionizing visibility technology for firefighters to combat smoke <br> and save lives effectively.</p>
-        <div class="d-flex flex-column flex-md-row justify-content-center align-items-center custom-feat-gap">
-            <div class="feat-img-div">
-                <img class="feat-img" src="../static/images/featImg1.jpg" alt="Firefighter looking at a burning structure.">
-                <p class="subhead">Smoke Detection Tech</p>
-                <p>Innovative solutions to detect smoke and enhance visibility in critical situations.</p>
+        <p class="text-center px-3">Revolutionizing visibility technology for firefighters to combat smoke <br class="d-none d-md-block"> and save lives effectively.</p>
+        <div class="row justify-content-center gx-4 gy-5 mt-2">
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 border-0 feature-color">
+                    <div class="feat-img-div mx-auto mb-3">
+                        <img class="feat-img img-fluid" src="../static/images/featImg1.jpg" alt="Firefighter looking at a burning structure.">
+                    </div>
+                    <div class="card-body p-0 text-center">
+                        <h5 class="subhead">Smoke Detection Tech</h5>
+                        <p class="px-3">Innovative solutions to detect smoke and enhance visibility in critical situations.</p>
+                    </div>
+                </div>
             </div>
-            <div class="feat-img-div">
-                <img class="feat-img" src="../static/images/featImg2.jpg" alt="Firefighters standing around.">
-                <p class="subhead">Vision Restoration Tools</p>
-                <p>Cutting-edge tools designed to restore vision for firefighters navigating through hazardous smoke environments.</p>
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 border-0 feature-color">
+                    <div class="feat-img-div mx-auto mb-3">
+                        <img class="feat-img img-fluid" src="../static/images/featImg2.jpg" alt="Firefighters standing around.">
+                    </div>
+                    <div class="card-body p-0 text-center">
+                        <h5 class="subhead">Vision Restoration Tools</h5>
+                        <p class="px-3">Cutting-edge tools designed to restore vision for firefighters navigating through hazardous smoke environments.</p>
+                    </div>
+                </div>
             </div>
-            <div class="feat-img-div">
-                <img class="feat-img" src="../static/images/featImg3.jpg" alt="Firefighters walking towards scene.">
-                <p class="subhead">Firefighter Protection Gear</p>
-                <p>Advanced Safety Equipment</p>
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 border-0 feature-color">
+                    <div class="feat-img-div mx-auto mb-3">
+                        <img class="feat-img img-fluid" src="../static/images/featImg3.jpg" alt="Firefighters walking towards scene.">
+                    </div>
+                    <div class="card-body p-0 text-center">
+                        <h5 class="subhead">Firefighter Protection Gear</h5>
+                        <p class="px-3">Advanced Safety Equipment</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <div class="container-fluid form-padding">
         <h2 class="text-center form-header">Get In Touch With Us</h2>
         <p class="text-center">Reach out to learn more about our innovative visibility <br> solutions.</p>
-            <div class="d-flex justify-content-center form-div">
-                <form class="form-size">
-                    <div class="form-group mt-3">
-                        <label for="FirstNameInput">First Name</label>
-                        <input type="text" class="form-control" id="FirstNameInput" placeholder="John">
-                    </div>
-                    <div class="form-group mt-3">
-                        <label for="LastNameInput">Last Name</label>
-                        <input type="text" class="form-control" id="LastNameInput" placeholder="Doe">
-                    </div>
-                    <div class="form-group mt-3">
-                        <label for="textArea1">Your Message</label>
-                        <textarea class="form-control" id="textArea1" rows="3"></textarea>
-                    </div>
-                    <button type="submit" class="form-btn mt-3">Submit Your Information</button>
-                </form>
-                <div class="form-img-div">
-                    <img src="../static/images/form-img.jpg" class="form-img" alt="Firefighter on ladder.">
+        <div class="d-flex flex-column flex-lg-row justify-content-center form-div">
+            <form class="form-size">
+                <div class="form-group mt-3">
+                    <label for="FirstNameInput">First Name</label>
+                    <input type="text" class="form-control" id="FirstNameInput" name="first_name" placeholder="John" required>
                 </div>
-            </div>
-    </div>
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <h2>Vision</h2>
-                    <p>Restoring sight for firefighters in smoke emergencies.</p>
-                    <div class="social-icons mt-4">
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                        <a href="#"><i class="bi bi-instagram"></i></a>
-                        <a href="#"><i class="bi bi-tiktok"></i></a>
-                        <a href="#"><i class="bi bi-twitter-x"></i></a>
-                    </div>
+                <div class="form-group mt-3">
+                    <label for="LastNameInput">Last Name</label>
+                    <input type="text" class="form-control" id="LastNameInput" name="last_name" placeholder="Doe" required>
                 </div>
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <h2>Safety</h2>
-                    <p>(123) - 456 -7890</p>
-                    <a href="mailto:contactus@vulcan.com" class="footer-email">contactus@vulcan.com</a>
+                <div class="form-group mt-3">
+                    <label for="EmailInput">Email</label>
+                    <input type="email" class="form-control" id="EmailInput" name="email" placeholder="johndoe@example.com" required>
                 </div>
-                <div class="col-md-4">
-                    <h2>Innovation</h2>
-                    <p>Enter your email:</p>
-                    <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Email address">
-                    </div>
-                    <button class="submit-btn">Submit</button>
+                <div class="form-group mt-3">
+                    <label for="textArea1">Your Message</label>
+                    <textarea class="form-control" id="textArea1" name="message" rows="3" required></textarea>
                 </div>
+                <button type="submit" class="form-btn mt-3">Submit Your Information</button>
+            </form>
+            <div class="form-img-div d-none d-lg-block">
+                <img src="../static/images/form-img.jpg" class="form-img" alt="Firefighter on ladder.">
             </div>
         </div>
-    </footer>
+    </div>
 {% endblock %}
