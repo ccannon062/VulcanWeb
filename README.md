@@ -1,7 +1,5 @@
 # Vulcan Enterprises Website
 
-![Vulcan Enterprises](https://via.placeholder.com/468x100?text=Vulcan+Enterprises)
-
 A Flask-based website for Vulcan Enterprises, showcasing innovative technology for enhancing visibility for firefighters. The site features a responsive design with Bootstrap and includes contact forms that send submissions directly to your email.
 
 ## Features
