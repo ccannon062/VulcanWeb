@@ -40,12 +40,22 @@
         </div>
     </div>
 </nav>
-
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <div class="container mt-3">
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category if category != 'message' else 'info' }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
 <main class="flex-shrink-0">
     {% block content %}
     {% endblock %}
 </main>
-
 <footer class="footer mt-auto">
     <div class="container">
         <div class="row">
@@ -67,7 +77,8 @@
             <div class="col-md-4">
                 <h2>Innovation</h2>
                 <p>Enter your email:</p>
-                <form id="newsletter-form" method="POST">
+                <form id="newsletter-form" method="POST" action="{{ url_for('main') }}">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
                     <div class="input-group mb-3">
                         <input type="email" class="form-control" name="email" id="newsletter-email" placeholder="Email address" required>
                     </div>
@@ -78,5 +89,6 @@
     </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='js/forms.js') }}"></script>
 </body>
 </html>
