@@ -234,22 +234,6 @@ body {
     max-width: 1140px;
 }
 
-.form-image-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
-    gap: 30px;
-}
-
-@media (max-width: 992px) {
-    .form-image-wrapper {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-}
-
 .form-size {
     background-color: #871C1C;
     padding: 30px;
@@ -257,7 +241,6 @@ body {
     max-width: 500px;
     color: #ffffff;
     border-radius: 10px;
-    flex: 1;
 }
 
 @media (max-width: 576px) {
@@ -283,10 +266,9 @@ body {
 .form-img-div {
     width: 100%;
     max-width: 500px;
-    flex: 1;
-    aspect-ratio: 1/1;
-    border-radius: 10px;
-    overflow: hidden;
+    height: auto;
+    aspect-ratio: 500/460;
+    margin-left: auto;
 }
 
 .form-img {
