@@ -78,9 +78,9 @@
     <div class="container-fluid form-padding">
         <h2 class="text-center form-header">Get In Touch With Us</h2>
         <p class="text-center">Reach out to learn more about our innovative visibility solutions.</p>
-        <div class="form-container mx-auto">
-            <div class="form-image-wrapper">
-                <form class="form-size" method="POST" action="{{ url_for('main') }}">
+        <div class="row form-container justify-content-center mx-auto">
+            <div class="col-12 col-lg-6 mb-4">
+                <form class="form-size mx-auto" method="POST" action="{{ url_for('main') }}">
                     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
                     <div class="form-group mt-3">
                         <label for="FirstNameInput">First Name</label>
@@ -100,7 +100,9 @@
                     </div>
                     <button type="submit" class="form-btn mt-3 w-100">Submit Your Information</button>
                 </form>
-                <div class="form-img-div">
+            </div>
+            <div class="col-lg-6 d-none d-lg-block">
+                <div class="form-img-div ms-lg-4">
                     <img src="{{ url_for('static', filename='images/form-img.jpg') }}" class="form-img" alt="Firefighter on ladder.">
                 </div>
             </div>
