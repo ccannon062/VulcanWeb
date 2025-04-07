@@ -39,10 +39,10 @@
             <a href="/products" class="cta-button text-decoration-none d-inline-block text-center border border-1 border-dark">Learn</a>
         </div>
         <div class="img-div">
-            <img src="../static/images/rescuePortrait.jpg" class="img-fluid img-1" alt="A female firefighter rigged with ropes and rescue equipment.">
+            <img src="{{ url_for('static', filename='images/rescuePortrait.jpg') }}" class="img-fluid img-1" alt="A female firefighter rigged with ropes and rescue equipment.">
         </div>
         <div class="img-div">
-            <img src="../static/images/mask.jpg" class="img-fluid img-2" alt="A self contained breathing apparatus.">
+            <img src="{{ url_for('static', filename='images/mask.jpg') }}" class="img-fluid img-2" alt="A self contained breathing apparatus.">
         </div>
     </div>
     <div class="container-fluid feature-color feature-padding">
@@ -52,7 +52,7 @@
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="card h-100 border-0 feature-color">
                     <div class="feat-img-div mx-auto mb-3">
-                        <img class="feat-img img-fluid" src="../static/images/featImg1.jpg" alt="Firefighter looking at a burning structure.">
+                        <img class="feat-img img-fluid" src="{{ url_for('static', filename='images/featImg1.jpg') }}" alt="Firefighter looking at a burning structure.">
                     </div>
                     <div class="card-body p-0 text-center">
                         <h5 class="subhead">Smoke Detection Tech</h5>
@@ -63,7 +63,7 @@
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="card h-100 border-0 feature-color">
                     <div class="feat-img-div mx-auto mb-3">
-                        <img class="feat-img img-fluid" src="../static/images/featImg2.jpg" alt="Firefighters standing around.">
+                        <img class="feat-img img-fluid" src="{{ url_for('static', filename='images/featImg2.jpg') }}" alt="Firefighters standing around.">
                     </div>
                     <div class="card-body p-0 text-center">
                         <h5 class="subhead">Vision Restoration Tools</h5>
@@ -74,7 +74,7 @@
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="card h-100 border-0 feature-color">
                     <div class="feat-img-div mx-auto mb-3">
-                        <img class="feat-img img-fluid" src="../static/images/featImg3.jpg" alt="Firefighters walking towards scene.">
+                        <img class="feat-img img-fluid" src="{{ url_for('static', filename='images/featImg3.jpg') }}" alt="Firefighters walking towards scene.">
                     </div>
                     <div class="card-body p-0 text-center">
                         <h5 class="subhead">Firefighter Protection Gear</h5>
@@ -109,7 +109,7 @@
                 <button type="submit" class="form-btn mt-3">Submit Your Information</button>
             </form>
             <div class="form-img-div d-none d-lg-block">
-                <img src="../static/images/form-img.jpg" class="form-img" alt="Firefighter on ladder.">
+                <img src="{{ url_for('static', filename='images/form-img.jpg') }}" class="form-img" alt="Firefighter on ladder.">
             </div>
         </div>
     </div>
