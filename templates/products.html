@@ -9,7 +9,7 @@
             <button type="button" class="product-btn">Download Product Sheet</button>
         </div>
         <div class="product-img-div">
-            <img src="../static/images/placeholder.jpg" class="product-img" alt="ARCTIC Version 9" style="border-radius: 5px;">
+            <img src="{{ url_for('static', filename='images/placeholder.jpg') }}" class="product-img" alt="ARCTIC Version 9" style="border-radius: 5px;">
         </div>
     </div>
     <div class="container-fluid p-5 shadow-top">
@@ -53,7 +53,7 @@
             </ul>
         </div>
         <div class="product-img-div">
-            <img src="../static/images/placeholder.jpg" class="product-img" alt="Product-img" style="border-radius: 5px;">
+            <img src="{{ url_for('static', filename='images/placeholder.jpg') }}" class="product-img" alt="Product-img" style="border-radius: 5px;">
         </div>
     </div>
     <div class="container-fluid p-5">
@@ -102,28 +102,28 @@
         <div class="d-flex flex-column align-items-center flex-md-row gap-3 p-5">
             <div class="d-flex flex-column align-items-center text-center">
                 <div class="app-img-div">
-                    <img src="../static/images/houseFire.jpg" class="app-img" alt="A house fire">
+                    <img src="{{ url_for('static', filename='images/houseFire.jpg') }}" class="app-img" alt="A house fire">
                 </div>
                 <h4>Structure Fires</h4>
                 <p>Helps firefighters navigate through smoke-filled environments and locate hotspots to improve efficiency and safety.</p>
             </div>
             <div class="d-flex flex-column align-items-center text-center">
                 <div class="app-img-div">
-                    <img src="../static/images/forestFire.jpg" class="app-img" alt="A forest fire">
+                    <img src="{{ url_for('static', filename='images/forestFire.jpg') }}" class="app-img" alt="A forest fire">
                 </div>
                 <h4>Wildland Fires</h4>
                 <p>Assists in detecting fire perimeters, identifying hotspots, and improving situational awareness in large-scale wildfire incidents.</p>
             </div>
             <div class="d-flex flex-column align-items-center text-center">
                 <div class="app-img-div">
-                    <img src="../static/images/searchAndRescue.jpg" class="app-img" alt="A search and rescue helicopter">
+                    <img src="{{ url_for('static', filename='images/searchAndRescue.jpg') }}" class="app-img" alt="A search and rescue helicopter">
                 </div>
                 <h4>Search & Rescue</h4>
                 <p>Enables responders to locate missing persons in low-visibility conditions, such as darkness, fog, or collapsed structures.</p>
             </div>
             <div class="d-flex flex-column align-items-center text-center">
                 <div class="app-img-div">
-                    <img src="../static/images/hazmat.jpg" class="app-img" alt="A man in a hazmat suit">
+                    <img src="{{ url_for('static', filename='images/hazmat.jpg') }}" class="app-img" alt="A man in a hazmat suit">
                 </div>
                 <h4>Hazmat Incidents</h4>
                 <p>Aids in detecting temperature changes and potential hazardous material leaks to enhance safety in hazardous environments.</p>
