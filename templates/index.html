@@ -1,3 +1,12 @@
+<!--
+    File: index.html
+    Project: vulcanWeb
+    Description: An index.html file representing the 'home' page.
+    Maintainer: Caleb Cannon
+    Version: 1.0
+    Last Modified: 2024-03-27
+    Dependencies: Bootstrap 5.3.3
+-->
 {% extends 'base.html' %}
 {% block content %}
     <div class="container-fluid hero p-3">
@@ -78,8 +87,8 @@
     <div class="container-fluid form-padding">
         <h2 class="text-center form-header">Get In Touch With Us</h2>
         <p class="text-center">Reach out to learn more about our innovative visibility <br> solutions.</p>
-        <div class="d-flex flex-column flex-lg-row justify-content-center form-div">
-            <form class="form-size" method="POST" action="{{ url_for('main') }}">
+        <div class="d-flex flex-column flex-lg-row justify-content-center form-div container-fluid px-3 px-md-5">
+            <form class="form-size mx-auto mx-lg-0 mb-4 mb-lg-0" method="POST" action="{{ url_for('main') }}">
                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
                 <div class="form-group mt-3">
                     <label for="FirstNameInput">First Name</label>
@@ -97,9 +106,9 @@
                     <label for="textArea1">Your Message</label>
                     <textarea class="form-control" id="textArea1" name="message" rows="3" required></textarea>
                 </div>
-                <button type="submit" class="form-btn mt-3">Submit Your Information</button>
+                <button type="submit" class="form-btn mt-3 w-100 w-md-auto">Submit Your Information</button>
             </form>
-            <div class="form-img-div d-none d-lg-block">
+            <div class="form-img-div d-none d-lg-block ms-lg-4">
                 <img src="{{ url_for('static', filename='images/form-img.jpg') }}" class="form-img" alt="Firefighter on ladder.">
             </div>
         </div>
