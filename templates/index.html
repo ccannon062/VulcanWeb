@@ -7,7 +7,7 @@
         <div class="d-flex justify-content-center pt-1 mb-5">
             <a href="/products" class="hero-btn text-decoration-none text-center border border-3 border-white">Learn More</a>
         </div>
-        <div class="d-flex flex-column flex-md-row justify-content-center pt-5 mb-5 custom-hero-gap hero-boxes align-items-center">
+        <div class="hero-boxes pt-5 mb-5">
             <div class="text-white text-center">
                 <h4>Advanced Solutions</h4>
                 <p class="hero-description">Cutting-edge tech for smoke visibility <br> restoration.</p>
@@ -77,34 +77,30 @@
     </div>
     <div class="container-fluid form-padding">
         <h2 class="text-center form-header">Get In Touch With Us</h2>
-        <p class="text-center">Reach out to learn more about our innovative visibility solutions.</p>
-        <div class="row form-container justify-content-center mx-auto">
-            <div class="col-12 col-lg-6 mb-4">
-                <form class="form-size mx-auto" method="POST" action="{{ url_for('main') }}">
-                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
-                    <div class="form-group mt-3">
-                        <label for="FirstNameInput">First Name</label>
-                        <input type="text" class="form-control" id="FirstNameInput" name="first_name" placeholder="John" required>
-                    </div>
-                    <div class="form-group mt-3">
-                        <label for="LastNameInput">Last Name</label>
-                        <input type="text" class="form-control" id="LastNameInput" name="last_name" placeholder="Doe" required>
-                    </div>
-                    <div class="form-group mt-3">
-                        <label for="EmailInput">Email</label>
-                        <input type="email" class="form-control" id="EmailInput" name="email" placeholder="johndoe@example.com" required>
-                    </div>
-                    <div class="form-group mt-3">
-                        <label for="textArea1">Your Message</label>
-                        <textarea class="form-control" id="textArea1" name="message" rows="3" required></textarea>
-                    </div>
-                    <button type="submit" class="form-btn mt-3 w-100">Submit Your Information</button>
-                </form>
-            </div>
-            <div class="col-lg-6 d-none d-lg-block">
-                <div class="form-img-div ms-lg-4">
-                    <img src="{{ url_for('static', filename='images/form-img.jpg') }}" class="form-img" alt="Firefighter on ladder.">
+        <p class="text-center">Reach out to learn more about our innovative visibility <br> solutions.</p>
+        <div class="d-flex flex-column flex-lg-row justify-content-center form-div container-fluid px-3 px-md-5">
+            <form class="form-size mx-auto mx-lg-0 mb-4 mb-lg-0" method="POST" action="{{ url_for('main') }}">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                <div class="form-group mt-3">
+                    <label for="FirstNameInput">First Name</label>
+                    <input type="text" class="form-control" id="FirstNameInput" name="first_name" placeholder="John" required>
                 </div>
+                <div class="form-group mt-3">
+                    <label for="LastNameInput">Last Name</label>
+                    <input type="text" class="form-control" id="LastNameInput" name="last_name" placeholder="Doe" required>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="EmailInput">Email</label>
+                    <input type="email" class="form-control" id="EmailInput" name="email" placeholder="johndoe@example.com" required>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="textArea1">Your Message</label>
+                    <textarea class="form-control" id="textArea1" name="message" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="form-btn mt-3 w-100 w-md-auto">Submit Your Information</button>
+            </form>
+            <div class="form-img-div d-none d-lg-block ms-lg-4">
+                <img src="{{ url_for('static', filename='images/form-img.jpg') }}" class="form-img" alt="Firefighter on ladder.">
             </div>
         </div>
     </div>
