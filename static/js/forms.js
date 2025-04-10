@@ -1,5 +1,3 @@
-
-
 function removeErrorMessage(input) {
     input.classList.remove('is-invalid');
     const errorMessage = input.parentNode.querySelector('.invalid-feedback');
@@ -128,7 +126,6 @@ function handleContactFormSubmit(event) {
             console.error('Error:', error);
         })
         .finally(() => {
-            // Reset button state
             submitButton.innerHTML = 'Submit Your Information';
             submitButton.disabled = false;
         });
@@ -163,12 +160,23 @@ function handleNewsletterSubmit(event) {
         body: encodedData
     })
         .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
+            if (response.redirected) {
+                window.location.href = response.url;
+                return null;
             }
-            return response.json();
+            
+            const contentType = response.headers.get('content-type');
+            if (contentType && contentType.includes('application/json')) {
+                return response.json().catch(e => {
+                    return { success: true };
+                });
+            } else {
+                return { success: true };
+            }
         })
         .then(data => {
+            if (data === null) return;
+            
             const footerSection = document.querySelector('footer');
             if (footerSection) {
                 const alertDiv = document.createElement('div');
@@ -220,7 +228,6 @@ document.addEventListener('DOMContentLoaded', function() {
         form.addEventListener('submit', handleContactFormSubmit);
     });
 
-  
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', handleNewsletterSubmit);
     }
@@ -249,7 +256,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     behavior: 'smooth',
                     block: 'start'
                 });
-                
+
                 history.pushState(null, null, targetId);
             }
         });
